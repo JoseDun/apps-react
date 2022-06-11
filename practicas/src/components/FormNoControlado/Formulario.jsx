@@ -15,7 +15,7 @@ const Formulario = () => {
     if (!todo.todoDescripcion.trim() || !todo.todoName.trim()){
         setError(true)
         return
-    }
+    } 
     setError(false)
     
   };

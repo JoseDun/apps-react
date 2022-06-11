@@ -1,13 +1,9 @@
-import "./App.css";
-/* import FormNoControlado from "./FormNoControlado/FormNoControlado"; */
-import Formulario from "./FormNoControlado/Formulario";
-
+import TodoList from "./FormNoControlado/TodoList";
 function App() {
   return (
-    <div className="app">
-      <h1>Formulario</h1>
-      {/*   <FormNoControlado /> */}
-      <Formulario />
+    <div className="container">
+      <h2>Mi App...</h2>
+      <TodoList />
     </div>
   );
 }
