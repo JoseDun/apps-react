@@ -8,6 +8,8 @@ import Inicio from "./routes/Inicio";
 import NoEncontrado from "./routes/NoEncontrado";
 import Post from "./routes/Post";
 import UserProvider from "./context/UserProvider";
+import RutaProtegida from "./routes/RutaProtegida";
+import VerificarUsuario from "./components/VerificarUsuario";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +21,14 @@ root.render(
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<Post />} />
           <Route path="contacto" element={<Contacto />} />
+          <Route
+            path="protegida"
+            element={
+              <VerificarUsuario>
+                <RutaProtegida />
+              </VerificarUsuario>
+            }
+          />
           <Route path="*" element={<NoEncontrado />} />
         </Route>
       </Routes>
